@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+/**
+ * AI Personal Study Assistant
+ * A console based smart assistant
+ */
+public class AIStudyAssistant {
+
+    static class Subject {
+        String name;
+        int difficulty;
+        int daysLeft;
+        double hoursStudied;
+
+        Subject(String name, int difficulty, int daysLeft) {
+            this.name = name;
+            this.difficulty = difficulty;
+            this.daysLeft = daysLeft;
+        }
+
+        double targetHours() {
+            return difficulty * 10.0;
+        }
+
+        double progress() {
+            return Math.min(100.0,
+                    hoursStudied / targetHours() * 100.…
